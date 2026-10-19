@@ -1,1 +1,4 @@
-User-agent: *\nAllow: /\nDisallow: /admin.html\nSitemap: https://gojogjatravel.web.id/sitemap.xml\n
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Sitemap: https://gojogjatravel.web.id/sitemap.xml
