@@ -242,3 +242,7 @@ footer>span{margin-top:5px}
  .article-card{padding:23px}
 }
 @media(prefers-reduced-motion:reduce){.hero-bg{transform:none}}
+
+/* Footer alignment and article expansion safeguard */
+footer .footer-about{text-align:left;margin:0;line-height:1.8}
+.article-card details p{display:block;-webkit-line-clamp:unset;overflow:visible;white-space:pre-wrap}
