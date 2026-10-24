@@ -33,6 +33,6 @@
   try {const saved=JSON.parse(localStorage.getItem('gojogja_admin_articles_v1')||'[]');if(Array.isArray(saved))published=saved.filter(a=>a&&a.status==='Published'&&a.title&&a.body).reverse();}catch(e){}
   const list=[...published,...starter];
   const esc=value=>{const node=document.createElement('span');node.textContent=String(value??'');return node.innerHTML};
-  root.innerHTML=list.map(a=>'<article class="article-card"><small>'+esc(a.category||'ARTIKEL')+'</small><h2>'+esc(a.title)+'</h2><p class="teaser">'+esc(String(a.body||'').replace(/\\n/g,' ').slice(0,180))+'…</p><div class="article-meta">GoJogja Travel · Travel inspiration</div><details><summary data-id="Baca selengkapnya ↗" data-en="Read full story ↗">Baca selengkapnya ↗</summary><p>'+esc(a.body)+'</p></details></article>').join('');
+  root.innerHTML=list.map(a=>'<article class="article-card"><small>'+esc(a.category||'ARTIKEL')+'</small><h2>'+esc(a.title)+'</h2><p class="teaser">'+esc(String(a.body||'').replace(/\s+/g,' ').slice(0,180))+'…</p><div class="article-meta">GoJogja Travel · Travel inspiration</div><details><summary data-id="Baca selengkapnya ↗" data-en="Read full story ↗">Baca selengkapnya ↗</summary><p>'+esc(a.body)+'</p></details></article>').join('');
 })();
 </script><script src="script.js?v=20261025b"></script></body></html>
